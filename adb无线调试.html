@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>打开无线调试</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #f8fafc;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #1e293b;
+            padding: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            padding: 48px 32px;
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .icon {
+            width: 64px;
+            height: 64px;
+            background: linear-gradient(135deg, #165dff 0%, #36bffa 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+
+        .icon svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: #0f172a;
+        }
+
+        .description {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #64748b;
+            margin-bottom: 32px;
+        }
+
+        .install-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 14px 24px;
+            background: linear-gradient(135deg, #165dff 0%, #36bffa 100%);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 8px rgba(22, 93, 255, 0.3);
+            border: none;
+            cursor: pointer;
+        }
+
+        .install-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(22, 93, 255, 0.4);
+        }
+
+        .install-btn:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 4px rgba(22, 93, 255, 0.3);
+        }
+
+        .tip {
+            margin-top: 24px;
+            font-size: 12px;
+            color: #94a3b8;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/>
+            </svg>
+        </div>
+        <h1>设备配对</h1>
+        <p class="description">将会打开无线调试</p>
+        <a href="intent:#Intent;component=com.android.settings/com.android.settings.wifi.WifiPickerActivity;S.%3Asettings%3Ashow_fragment=com.android.settings.development.WirelessDebuggingFragment;end" class="install-btn">
+            打开无线调试页面
+        </a>
+        <p class="tip">仅适用于作业帮安卓设备<br>请确定可用</p>
+    </div>
+</body>
+</html>
